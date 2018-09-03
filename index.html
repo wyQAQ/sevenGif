@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="Keywords" content="关键字，关键词">
+  <meta name="Description" content="描述信息">
+  <title>七夕快乐</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+ </head>
+ <body>
+     <p class="top">
+    <marquee behavior="alternate">时光不老 我们不散</marquee>
+    </p>
+    <div class="box">
+        <div class="pic">
+            <ul>
+                 <li class="heart-shape" style="background:url(images/3.jpg)"></li>
+                 <li class="heart-shape" style="background:url(images/6.jpg)"></li>
+                 <li class="heart-shape" style="background:url(images/1.jpg)"></li>
+                 <li class="heart-shape" style="background:url(images/3.jpg)"></li>
+                 <li class="heart-shape" style="background:url(images/6.jpg)"></li>
+                 <li class="heart-shape" style="background:url(images/1.jpg)"></li>
+            </ul>
+        </div>
+    </div>
+    <p id="text"></p>
+    <embed src="bgMusic.mp3" loop=true style="height:0;"/>    
+ </body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/snow.js"></script>
+<script>
+    createSnow('', 6); 
+</script>
+<script>    
+    $(".pic ul li").each(function(i){
+        var deg=360/$(".pic ul li").size();
+        $(this).css({"transform":"rotateY("+deg*i+"deg) rotateZ(45deg)  translateY("+(-i*282)+"px) translateZ(216px)"});
+    });
+    var i=0;
+    var str="把天上的银河截下，汇成爱情的心河，流进你的心里;把天上的鹊桥摘下，变成爱情的心桥，搭在你的心里。给你此生不变的挚爱. 七夕快乐 ! ! !";
+    var obj = $('<audio src="http://fanyi.baidu.com/gettts?lan=zh&amp;text='+str+'&amp;spd=5&amp;sorce=web" autoplay></audio>');
+    $("body").append(obj);  
+    function typing(){      
+        var myp=document.getElementById("text");
+        myp.innerHTML+=str.charAt(i);
+        i++;
+        var id = setTimeout(typing,150);
+        if(i==str.length){
+            clearTimeout(id);
+        }
+    }
+    typing();
+</script>

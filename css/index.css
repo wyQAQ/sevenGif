@@ -1,0 +1,92 @@
+*{margin:0;padding:0;}
+    html,body{width:100%;height:100%;overflow:hidden;background-color: #000;}
+    .top{width:400px;height:50px;margin:50px auto;font-size:30px;font-family:"楷体";color:#fff;}
+    .box{width:310px;height:310px;margin:auto;perspective:2500px;}
+    .box .pic{position:relative;transform-style:preserve-3d;animation:play 15s linear infinite;}
+    .box ul li{list-style:none;position:relative;top:0;left:0;width: 200px;height: 200px;}
+    .box .pic ul li img{width: 100%;height: 100%;}
+    #text{width:100%;height:200px;margin:auto;color:#6fade1;font-size:24px;font-family:"楷体";}
+    @keyframes play{
+        from{transform:rotateY(0deg);}
+        to{transform:rotateY(360deg);}
+    }
+
+    .box ul .heart-shape{  
+        position: relative;  
+        width: 200px;  
+        height: 200px;  
+        -webkit-transform: rotateZ(45deg);  
+        -moz-transform: rotateZ(45deg);  
+        -ms-transform: rotateZ(45deg);  
+        -o-transform: rotateZ(45deg);  
+        transform: rotateZ(45deg);  
+        background-color:rgb(169, 26, 7);
+    }  
+    .box ul .heart-shape:before,  
+    .box ul .heart-shape:after{  
+        position: absolute;  
+        width: 200px;  
+        height: 200px;  
+        content: '';  
+        -webkit-border-radius: 50%;  
+        -moz-border-radius: 50%;  
+        -o-border-radius: 50%;  
+        border-radius: 50%;        
+        background-color: rgb(169, 7, 76);  
+    }
+    .box ul .heart-shape:nth-of-type(1):before{
+        background: url(../images/1.jpg);
+        background-size: cover;
+    } 
+    .box ul .heart-shape:nth-of-type(1):after{
+        background: url(../images/2.jpg);
+        background-size: cover;
+    }
+    .box ul .heart-shape:nth-of-type(2):before{
+        background: url(../images/4.jpg);
+        background-size: cover;
+    } 
+    .box ul .heart-shape:nth-of-type(2):after{
+        background: url(../images/5.jpg);
+        background-size: cover;
+    } 
+    .box ul .heart-shape:nth-of-type(3):before{
+        background: url(../images/2.jpg);
+        background-size: cover;
+    } 
+    .box ul .heart-shape:nth-of-type(3):after{
+        background: url(../images/3.jpg);
+        background-size: cover;
+    }
+    .box ul .heart-shape:nth-of-type(4):before{
+        background: url(../images/1.jpg);
+        background-size: cover;
+    } 
+    .box ul .heart-shape:nth-of-type(4):after{
+        background: url(../images/2.jpg);
+        background-size: cover;
+    }
+    .box ul .heart-shape:nth-of-type(5):before{
+        background: url(../images/4.jpg);
+        background-size: cover;
+    } 
+    .box ul .heart-shape:nth-of-type(5):after{
+        background: url(../images/5.jpg);
+        background-size: cover;
+    } 
+    .box ul .heart-shape:nth-of-type(6):before{
+        background: url(../images/2.jpg);
+        background-size: cover;
+    } 
+    .box ul .heart-shape:nth-of-type(6):after{
+        background: url(../images/3.jpg);
+        background-size: cover;
+    }
+    .box ul .heart-shape:before{  
+        bottom: 0px;  
+        left: -90px;  
+    }  
+    .box ul .heart-shape:after{  
+        top: -90px;  
+        right: 0px;  
+    }  
